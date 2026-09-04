@@ -1,0 +1,26 @@
+{
+    "full_name": "Robin Chriqui",
+    "name": "Robin",
+    "current_role": "AI Engineer",
+    "location": "Tel Aviv, Israel",
+    "github": "https://github.com/rchriqui",
+    "email": "robin.chriqui@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/robinchriqui/",
+    "specialties": [
+      "Agentic AI",
+      "Data Science",
+      "Machine Learning",
+      "Computer Vision",
+      "Cloud-Native Applications",
+      "Medical Technology"
+    ],
+    "years_experience": 6,
+    "education": [
+      {
+        "degree": "Master in Economics",
+        "institution": "Sorbonne Assas University",
+        "year": "2018-2019",
+        "main_courses": "Mathematics, Statistics, Economics, Finance, Strategy"
+      }
+    ]
+  }

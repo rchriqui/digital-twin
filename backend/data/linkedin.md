@@ -1,105 +1,162 @@
-# Robin Chriqui — LinkedIn Profile
+# Robin Chriqui
 
-**Agentic AI & Data Science Engineer @ KARL STORZ**  
+**Agentic AI & Data Science Engineer at KARL STORZ**  
 Israel
 
 ## Contact
 
-- Email: robin.chriqui@gmail.com
-- LinkedIn: https://www.linkedin.com/in/robinchriqui
+- **Email:** [robin.chriqui@gmail.com](mailto:robin.chriqui@gmail.com)
+- **LinkedIn:** [linkedin.com/in/robinchriqui](https://www.linkedin.com/in/robinchriqui)
+- **GitHub:** [github.com/rchriqui](https://github.com/rchriqui)
 
-## Top Skills
+## Professional Summary
 
-- Data Science
-- Multi-agent Systems
-- Machine Learning
+Agentic AI and Data Science Engineer with experience building end-to-end AI systems across the full machine learning lifecycle, from research and experimentation to cloud and edge deployment. Specialized in multi-agent systems, multimodal AI, retrieval-augmented generation, LLM and VLM fine-tuning, model distillation, evaluation, and optimized inference for medical and robotic applications.
 
-## Certifications
+## Core Skills
 
-- Data Science Methodology
-- Inferential Statistical Analysis with Python
-- Structuring Machine Learning Projects
-- Machine Learning with Python
-- AI Agents Fundamentals
+- **Agentic AI:** Multi-agent systems, agent orchestration, tool calling, Model Context Protocol (MCP)
+- **Generative AI:** LLMs, vision-language models, multimodal AI, prompt engineering
+- **Retrieval:** RAG, semantic search, embeddings, vector databases, document ingestion, retrieval evaluation, Amazon Bedrock
+- **Model Development:** Fine-tuning, LoRA, QLoRA, Unsloth, knowledge distillation, quantization, model compression
+- **Machine Learning:** Classification, prediction, clustering, NLP, computer vision, time-series analysis
+- **Frameworks:** Python, PyTorch, TensorFlow, Hugging Face, scikit-learn, SciPy
+- **Inference:** TensorRT-LLM, vLLM, embedded GPU deployment, NVIDIA Blackwell
+- **Cloud & MLOps:** AWS, GCP, Amazon Bedrock, Lambda, ECR, Docker, Terraform, GitHub Actions, CI/CD
+- **Web Development:** Next.js, React, TypeScript, FastAPI, Node.js
 
-## Experience
+## Professional Experience
 
-### KARL STORZ — 4 years 9 months
+### KARL STORZ — Agentic AI & Data Science Engineer
 
-#### Agentic AI & Data Science Engineer
-April 2026 – Present
+**December 2021 – Present | Israel**  
+*Formerly Asensus Surgical; acquired by KARL STORZ*
 
-#### Data Scientist
-December 2021 – April 2026
+- Build end-to-end agentic AI systems across the full ML lifecycle, from ideation and experimentation to production deployment, in collaboration with software, product, medical, computer vision, and embedded systems teams.
+- Designed a real-time orchestrator coordinating specialist models for audio, video, computer vision, data analysis, medical research, and question answering, with workloads distributed across edge devices and GCP.
+- Integrated LLMs, internal tools, structured data sources, tool calling, and MCP services into real-time agentic workflows for surgical applications.
+- Built an agentic RAG system providing access to more than 700 pages of technical documentation, including document ingestion, chunking, embedding, retrieval, reranking, response generation, and retrieval-quality evaluation.
+- Used Amazon Bedrock to develop managed generative AI and retrieval workflows on AWS, connecting foundation models with enterprise knowledge sources.
+- Trained, fine-tuned, and distilled a 26B Gemma vision-language model using 1,500 hours of surgical video and proprietary datasets.
+- Applied Unsloth, LoRA, and QLoRA to develop task-specific experts that outperformed larger general-purpose models, including GPT-5.6, Gemini 3.1, and Claude Opus 5, on internal accuracy and latency benchmarks.
+- Curated domain-specific training and evaluation datasets and built automated pipelines to compare base, fine-tuned, and distilled models on accuracy, latency, memory usage, robustness, and cost.
+- Deployed and optimized models on NVIDIA Blackwell-based embedded GPU systems using TensorRT-LLM, vLLM, quantization, and model compression to reduce latency and memory usage.
+- Developed machine learning models from robotic telemetry and multivariate time-series data to identify surgical phases, actions, behavioral patterns, and surgeon-performance indicators.
+- Contributed as a co-inventor to an invention disclosure approved for provisional patent filing based on the surgeon-performance system.
+- Developed an NVIDIA Cosmos pipeline to generate video sequences from individual frames, supporting synthetic-data generation, computer vision research, and data augmentation.
+- Containerized AI services with Docker and implemented cloud infrastructure as code with Terraform for reproducible AWS deployments.
+- Built CI/CD workflows with GitHub Actions to test, build, containerize, and deploy AI applications and services automatically.
 
-Working on applied AI systems combining Generative AI, multi-agent architectures and data science for intelligent applications.
+**Technologies:** Python, PyTorch, TensorFlow, Hugging Face, Unsloth, LLMs, VLMs, RAG, Amazon Bedrock, MCP, TensorRT-LLM, vLLM, NVIDIA Cosmos, Docker, Terraform, GitHub Actions, AWS, GCP
 
-- Designed real-time multi-agent systems orchestrating multiple LLMs for complex reasoning and user interaction
-- Built RAG pipelines integrating internal knowledge bases and structured datasets
-- Performed LLM fine-tuning and evaluation to improve task-specific performance
-- Developed machine learning models for prediction, classification and clustering on structured datasets
-- Benchmarked frontier and open-source models to optimize accuracy, latency and cost
+### OpenClassrooms — Data Science Mentor
 
-**Tech:** Python | PyTorch | LLMs | RAG | Multi-agent systems | HuggingFace | Machine Learning
+**May 2021 – December 2023 | Remote**
 
-### OpenClassrooms — Mentor Data Scientist
-May 2021 – December 2023 (2 years 8 months)
+- Mentored students completing professional data science and machine learning programs.
+- Reviewed and evaluated projects covering Python, machine learning, statistics, data analysis, and model interpretation.
+- Provided technical feedback and assessed whether projects met degree requirements and professional standards.
 
-### IBM — Data Scientist
-June 2020 – January 2021 (8 months) · Givatayim
+**Technologies:** Python, Machine Learning, Data Science, Statistics, Mentoring
 
-Collaborated with a team of Data Scientists to develop machine learning and NLP solutions for insurance risk analysis and document classification.
+### IBM — Data Scientist, Short-Term Contract
 
-- Built predictive models for insurance risk evaluation using ensemble methods, improving decision-making and achieving an F1 score of 88%
-- Designed and optimized transformer-based NLP models in TensorFlow (e.g., Universal Sentence Encoder) to classify complex text requirements
-- Developed data preprocessing and feature engineering pipelines to improve model performance and robustness
-- Worked closely with cross-functional teams to translate business requirements into scalable ML solutions
+**June 2020 – January 2021 | Givatayim, Israel**
 
-**Tech:** Python | TensorFlow | NLP | Transformers | Machine Learning | Ensemble Models
+- Collaborated with data scientists to develop machine learning and NLP solutions for insurance risk analysis and document classification.
+- Built predictive models for insurance risk evaluation using ensemble methods, achieving an F1 score of 88%.
+- Designed and optimized transformer-based NLP models in TensorFlow, including the Universal Sentence Encoder, to classify complex text requirements.
+- Developed data preprocessing and feature-engineering pipelines to improve model performance and robustness.
+- Translated business requirements into scalable machine learning solutions with cross-functional teams.
 
-### Compit — Data Scientist
-December 2019 – May 2020 (6 months) · Nes Ziona
+**Technologies:** Python, TensorFlow, NLP, Transformers, Universal Sentence Encoder, Machine Learning, Ensemble Models
 
-Worked on data engineering and machine learning tasks to integrate multiple data sources and extract insights from structured datasets.
+### COMPIT — Data Scientist Intern
 
-- Implemented a data pipeline on AWS to integrate and process data from multiple sources
-- Built clustering models using SciPy and scikit-learn to identify patterns in structured data
-- Performed data preprocessing and feature engineering to improve model performance
+**December 2019 – May 2020 | Nes Ziona, Israel**
 
-**Tech:** Python | AWS | SciPy | scikit-learn | Data Pipelines | Machine Learning
+- Implemented an AWS data pipeline to ingest, integrate, and process data from multiple sources.
+- Built clustering models using SciPy and scikit-learn to identify patterns in structured datasets.
+- Performed data preprocessing and feature engineering to improve model performance.
 
-### Credit Agricole — Data Officer
-September 2018 – September 2019 (1 year 1 month) · Paris
+**Technologies:** Python, AWS, SciPy, scikit-learn, Data Pipelines, Machine Learning, Clustering
 
-Worked on financial data analysis and automation to support portfolio risk monitoring for investment funds.
+### Crédit Agricole — Data Officer
 
-- Analyzed trading and portfolio data to monitor risk exposure across investment funds
-- Automated portfolio risk analysis and reporting using SQL and VBA
-- Developed data queries and tools to improve efficiency of financial data processing
+**September 2018 – September 2019 | Paris, France**
 
-**Tech:** SQL | VBA | Financial Data Analysis | Risk Analysis
+- Analyzed trading and portfolio data to monitor risk exposure across investment funds.
+- Automated portfolio-risk analysis and reporting using SQL and VBA.
+- Developed data queries and internal tools to improve the efficiency of financial-data processing.
 
-### Restominute — Founder
-January 2016 – December 2016 (1 year) · Région de Paris, France
+**Technologies:** SQL, VBA, Financial Data Analysis, Portfolio Risk Analysis, Automation
 
-- Managed a team of three developers to develop the app
-- Created the business plan for the project
-- Promoted the project to events and clients
+### RestoMinute — Founder
+
+**January 2016 – December 2016 | Paris, France**
+
+- Founded and developed a mobile application project in the restaurant sector.
+- Managed a team of three developers responsible for building the application.
+- Created the business plan and promoted the project to prospective clients and at industry events.
+
+**Skills:** Entrepreneurship, Product Management, Team Leadership, Business Strategy
 
 ### Venga SAS — Data Analyst Intern
-May 2016 – September 2016 (5 months) · Région de Paris, France
 
-Startup — student social network and administrative management application.
+**May 2016 – September 2016 | Paris, France**
 
-- Centralised, analysed, monitored new sales opportunities
-- Helped build the business case solution
+- Centralized, analyzed, and monitored new sales opportunities for a student social-network and administrative-management startup.
+- Contributed data analysis and market insights to the product's business case.
 
-Supervisor: Kevin Attal
+**Skills:** Data Analysis, Sales Analytics, Business Analysis
 
 ## Education
 
-- **Université Panthéon Assas (Paris II)** — MSc Economics (2017–2019)
-- **University of Michigan** — Inferential Statistics with Python (2020)
-- **Saint-Cyr Officer Military School** — Military Leadership and Management Training (2019)
-- **Sorbonne Universités** — Graduate Degree, Entrepreneurship (2016–2017)
-- **Sorbonne University** — Bachelor of Science (2013–2016)
+### Sorbonne Assas University — M.Sc. in Economics
+
+**2017 – 2019 | Graduated with Honors**
+
+Coursework included mathematics, econometrics, inferential statistics, and strategy.
+
+### Sorbonne Assas University — B.Sc. in Economics
+
+**2013 – 2016 | Graduated with Honors**
+
+### Sorbonne University — Student Entrepreneur Program
+
+**2015 – 2016**
+
+## Certifications
+
+- **IBM Data Science Professional Certificate** — IBM
+- **Inferential Statistics with Python** — University of Michigan
+- **Full Stack AI Engineer** — Ed Donner, Udemy
+
+## Projects
+
+### [DocNote.org](https://docnote.org) — Clinical Documentation AI
+
+- Built a full-stack SaaS application that transforms medical consultations into clinical summaries, follow-up actions, and patient-ready emails.
+- Integrated user authentication, audio transcription, and streamed OpenAI responses.
+- Developed the application with Next.js, React, TypeScript, Node.js, FastAPI, and Python.
+- Containerized the backend with Docker and deployed it to AWS Lambda through Amazon ECR.
+- Defined reproducible AWS infrastructure with Terraform and automated testing and deployment through GitHub Actions.
+
+**Technologies:** Next.js, React, TypeScript, Node.js, FastAPI, Python, OpenAI API, Docker, AWS Lambda, Amazon ECR, Terraform, GitHub Actions
+
+### [Robin Digital Twin](https://robindigitaltwin.com/) — AI Portfolio Assistant
+
+- Built and deployed an interactive AI digital twin that allows recruiters and visitors to ask questions about my professional background, technical skills, projects, and AI experience.
+- Developed a conversational interface with Next.js and React, connected to a Python API powered by Amazon Bedrock.
+- Implemented persistent memory and profile-context retrieval using Amazon S3 so responses remain grounded in personal career data.
+- Defined the complete AWS infrastructure as code with Terraform, covering the serverless API, storage, and frontend delivery components.
+- Built a GitHub Actions CI/CD pipeline to test and deploy application and infrastructure changes automatically.
+- Deployed the serverless backend with AWS Lambda and API Gateway and delivered the frontend through Amazon S3 and CloudFront.
+
+**Technologies:** Next.js, React, TypeScript, Python, FastAPI, Mangum, Amazon Bedrock, AWS Lambda, API Gateway, Amazon S3, CloudFront, Terraform, GitHub Actions
+
+## Languages
+
+- French — Native
+- English — Professional proficiency
+- Hebrew — Working proficiency

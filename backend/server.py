@@ -124,7 +124,7 @@ def call_bedrock(conversation: List[Dict], user_message: str) -> str:
             modelId=BEDROCK_MODEL_ID,
             system=[{"text": prompt()}],
             messages=messages,
-            inferenceConfig={"maxTokens": 600, "temperature": 0.7, "topP": 0.9},
+            inferenceConfig={"maxTokens": 900, "temperature": 0.7, "topP": 0.9},
         )
 
         # Extract the response text

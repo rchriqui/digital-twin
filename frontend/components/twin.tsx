@@ -32,6 +32,12 @@ interface Message {
     timestamp: Date;
 }
 
+const SUGGESTIONS = [
+    "What are Robin's strongest AI skills?",
+    'Tell me about his key projects',
+    'Why should we hire Robin?',
+];
+
 export default function Twin() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState('');
@@ -48,13 +54,14 @@ export default function Twin() {
         scrollToBottom();
     }, [messages]);
 
-    const sendMessage = async () => {
-        if (!input.trim() || isLoading) return;
+    const sendMessage = async (text?: string) => {
+        const messageText = (text ?? input).trim();
+        if (!messageText || isLoading) return;
 
         const userMessage: Message = {
             id: Date.now().toString(),
             role: 'user',
-            content: input,
+            content: messageText,
             timestamp: new Date(),
         };
 
@@ -69,7 +76,7 @@ export default function Twin() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    message: userMessage.content,
+                    message: messageText,
                     session_id: sessionId || undefined,
                 }),
             });
@@ -157,25 +164,18 @@ export default function Twin() {
                             </p>
                         </div>
 
-                        <div className="flex gap-3 justify-start max-w-lg mx-auto">
-                            <div className="flex-shrink-0">
-                                {hasAvatar ? (
-                                    <img
-                                        src="/avatar.png"
-                                        alt="Robin Chriqui"
-                                        className="w-8 h-8 rounded-full border border-slate-300 object-cover"
-                                    />
-                                ) : (
-                                    <div className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center">
-                                        <Bot className="w-5 h-5 text-white" />
-                                    </div>
-                                )}
-                            </div>
-                            <div className="rounded-lg border border-gray-200 bg-white p-3 text-sm leading-relaxed text-gray-800 shadow-sm">
-                                <p className="mb-0">
-                                    At KARL STORZ I build agentic AI for surgical applications — multi-agent orchestration, RAG over 700+ pages of technical docs, and VLM fine-tuning for edge deployment.
-                                </p>
-                            </div>
+                        <div className="flex flex-col gap-2 max-w-md mx-auto">
+                            {SUGGESTIONS.map((suggestion) => (
+                                <button
+                                    key={suggestion}
+                                    type="button"
+                                    onClick={() => sendMessage(suggestion)}
+                                    disabled={isLoading}
+                                    className="rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-left text-sm text-gray-700 shadow-sm transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-gray-900 disabled:cursor-not-allowed disabled:opacity-50"
+                                >
+                                    {suggestion}
+                                </button>
+                            ))}
                         </div>
                     </div>
                 )}
@@ -281,7 +281,7 @@ export default function Twin() {
                         autoFocus
                     />
                     <button
-                        onClick={sendMessage}
+                        onClick={() => sendMessage()}
                         disabled={!input.trim() || isLoading}
                         className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-blue-300 disabled:cursor-not-allowed transition-colors"
                     >

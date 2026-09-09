@@ -111,10 +111,6 @@ def call_bedrock(conversation: List[Dict], user_message: str) -> str:
     # Build messages in Bedrock format
     messages = []
 
-    # Add system prompt as first user message
-    # Or there's a better way to do this - pass in system=[{"text": prompt()}] to the converse call below
-    messages.append({"role": "user", "content": [{"text": f"System: {prompt()}"}]})
-
     # Add conversation history (limit to last 25 exchanges)
     for msg in conversation[-50:]:
         messages.append({"role": msg["role"], "content": [{"text": msg["content"]}]})
@@ -126,6 +122,7 @@ def call_bedrock(conversation: List[Dict], user_message: str) -> str:
         # Call Bedrock using the converse API
         response = bedrock_client.converse(
             modelId=BEDROCK_MODEL_ID,
+            system=[{"text": prompt()}],
             messages=messages,
             inferenceConfig={"maxTokens": 2000, "temperature": 0.7, "topP": 0.9},
         )

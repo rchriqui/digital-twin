@@ -32,15 +32,8 @@ interface Message {
     timestamp: Date;
 }
 
-const WELCOME_MESSAGE: Message = {
-    id: 'welcome',
-    role: 'assistant',
-    content: `Hi — I'm Robin's digital twin, an AI trained on his background and experience. Ask me about his work, projects, or skills.`,
-    timestamp: new Date(),
-};
-
 export default function Twin() {
-    const [messages, setMessages] = useState<Message[]>([WELCOME_MESSAGE]);
+    const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [sessionId, setSessionId] = useState<string>('');
@@ -144,6 +137,24 @@ export default function Twin() {
 
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                {messages.length === 0 && (
+                    <div className="text-center text-gray-500 mt-8">
+                        {hasAvatar ? (
+                            <img
+                                src="/avatar.png"
+                                alt="Robin Chriqui"
+                                className="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-gray-300"
+                            />
+                        ) : (
+                            <Bot className="w-12 h-12 mx-auto mb-3 text-gray-400" />
+                        )}
+                        <p className="font-medium text-gray-700">Hi — I&apos;m Robin.</p>
+                        <p className="text-sm mt-2 max-w-sm mx-auto">
+                            Ask me about my experience, projects, or work in agentic AI and data science.
+                        </p>
+                    </div>
+                )}
+
                 {messages.map((message) => (
                     <div
                         key={message.id}

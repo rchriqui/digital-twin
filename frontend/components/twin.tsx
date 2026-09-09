@@ -1,7 +1,29 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import { Send, Bot, User } from 'lucide-react';
+
+const markdownComponents = {
+    h3: ({ children }: { children?: React.ReactNode }) => (
+        <h3 className="mt-3 mb-1 text-sm font-semibold text-gray-900 first:mt-0">{children}</h3>
+    ),
+    p: ({ children }: { children?: React.ReactNode }) => (
+        <p className="mb-2 last:mb-0">{children}</p>
+    ),
+    ul: ({ children }: { children?: React.ReactNode }) => (
+        <ul className="my-2 list-disc space-y-1 pl-5">{children}</ul>
+    ),
+    ol: ({ children }: { children?: React.ReactNode }) => (
+        <ol className="my-2 list-decimal space-y-1 pl-5">{children}</ol>
+    ),
+    li: ({ children }: { children?: React.ReactNode }) => (
+        <li className="text-gray-800">{children}</li>
+    ),
+    strong: ({ children }: { children?: React.ReactNode }) => (
+        <strong className="font-semibold text-gray-900">{children}</strong>
+    ),
+};
 
 interface Message {
     id: string;
@@ -161,7 +183,15 @@ export default function Twin() {
                                     : 'bg-white border border-gray-200 text-gray-800'
                             }`}
                         >
-                            <p className="whitespace-pre-wrap">{message.content}</p>
+                            {message.role === 'assistant' ? (
+                                <div className="text-sm leading-relaxed">
+                                    <ReactMarkdown components={markdownComponents}>
+                                        {message.content}
+                                    </ReactMarkdown>
+                                </div>
+                            ) : (
+                                <p className="whitespace-pre-wrap">{message.content}</p>
+                            )}
                             <p
                                 className={`text-xs mt-1 ${
                                     message.role === 'user' ? 'text-slate-300' : 'text-gray-500'

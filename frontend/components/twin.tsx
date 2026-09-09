@@ -138,20 +138,45 @@ export default function Twin() {
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
                 {messages.length === 0 && (
-                    <div className="text-center text-gray-500 mt-8">
-                        {hasAvatar ? (
-                            <img
-                                src="/avatar.png"
-                                alt="Robin Chriqui"
-                                className="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-gray-300"
-                            />
-                        ) : (
-                            <Bot className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                        )}
-                        <p className="font-medium text-gray-700">Hi — I&apos;m Robin.</p>
-                        <p className="text-sm mt-2 max-w-sm mx-auto">
-                            Ask me about my experience, projects, or work in agentic AI and data science.
-                        </p>
+                    <div className="mt-4 space-y-5">
+                        <div className="text-center text-gray-500">
+                            {hasAvatar ? (
+                                <img
+                                    src="/avatar.png"
+                                    alt="Robin Chriqui"
+                                    className="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-gray-300 object-cover"
+                                />
+                            ) : (
+                                <Bot className="w-16 h-16 mx-auto mb-4 text-gray-400" />
+                            )}
+                            <p className="text-lg font-semibold text-gray-800">
+                                Meet my AI Digital Twin
+                            </p>
+                            <p className="text-sm mt-2 max-w-md mx-auto text-gray-600">
+                                Ask about my experience, projects, and technical expertise.
+                            </p>
+                        </div>
+
+                        <div className="flex gap-3 justify-start max-w-lg mx-auto">
+                            <div className="flex-shrink-0">
+                                {hasAvatar ? (
+                                    <img
+                                        src="/avatar.png"
+                                        alt="Robin Chriqui"
+                                        className="w-8 h-8 rounded-full border border-slate-300 object-cover"
+                                    />
+                                ) : (
+                                    <div className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center">
+                                        <Bot className="w-5 h-5 text-white" />
+                                    </div>
+                                )}
+                            </div>
+                            <div className="rounded-lg border border-gray-200 bg-white p-3 text-sm leading-relaxed text-gray-800 shadow-sm">
+                                <p className="mb-0">
+                                    At KARL STORZ I build agentic AI for surgical applications — multi-agent orchestration, RAG over 700+ pages of technical docs, and VLM fine-tuning for edge deployment.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 )}
 
@@ -251,14 +276,14 @@ export default function Twin() {
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyPress}
                         placeholder="Ask about my background, skills, or projects..."
-                        className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-600 focus:border-transparent text-gray-800"
+                        className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-800"
                         disabled={isLoading}
                         autoFocus
                     />
                     <button
                         onClick={sendMessage}
                         disabled={!input.trim() || isLoading}
-                        className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-blue-300 disabled:cursor-not-allowed transition-colors"
                     >
                         <Send className="w-5 h-5" />
                     </button>

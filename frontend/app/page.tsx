@@ -17,7 +17,7 @@ export default function Home() {
           <p className="text-center text-gray-600 mb-4">
             Agentic AI &amp; Data Science Engineer
           </p>
-          <div className="flex justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 mb-6">
             <a
               href={LINKEDIN_URL}
               target="_blank"
@@ -26,7 +26,7 @@ export default function Home() {
             >
               LinkedIn
             </a>
-            <span className="text-slate-300" aria-hidden="true">
+            <span className="text-slate-300 hidden sm:inline" aria-hidden="true">
               ·
             </span>
             <a
@@ -37,32 +37,26 @@ export default function Home() {
             >
               GitHub
             </a>
+            <span className="text-slate-300 hidden sm:inline" aria-hidden="true">
+              ·
+            </span>
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkClass}
+            >
+              View projects
+            </a>
           </div>
 
-          <div className="h-[600px]">
+          <div className="h-[540px]">
             <Twin />
           </div>
 
-          <footer className="mt-8 text-center text-sm text-gray-500 space-y-2">
-            <p>Built with Next.js, FastAPI, Amazon Bedrock &amp; AWS — Tel Aviv, Israel</p>
-            <p className="flex justify-center gap-4">
-              <a
-                href={LINKEDIN_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-slate-700 transition-colors"
-              >
-                LinkedIn
-              </a>
-              <span aria-hidden="true">·</span>
-              <a
-                href={GITHUB_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-slate-700 transition-colors"
-              >
-                GitHub
-              </a>
+          <footer className="mt-6 text-center text-sm text-gray-500">
+            <p>
+              Built with Next.js, FastAPI, Amazon Bedrock, AWS, Terraform &amp; GitHub Actions — Tel Aviv, Israel
             </p>
           </footer>
         </div>

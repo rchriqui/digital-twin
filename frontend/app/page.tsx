@@ -44,7 +44,7 @@ export default function Home() {
           </div>
 
           <footer className="mt-8 text-center text-sm text-gray-500 space-y-2">
-            <p>Chat with Robin&apos;s Digital Twin — Tel Aviv, Israel</p>
+            <p>Built with Next.js, FastAPI, Amazon Bedrock &amp; AWS — Tel Aviv, Israel</p>
             <p className="flex justify-center gap-4">
               <a
                 href={LINKEDIN_URL}

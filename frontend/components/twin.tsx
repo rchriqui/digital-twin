@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Send, Bot, User } from 'lucide-react';
+import { Send, Bot, User, ArrowRight } from 'lucide-react';
 
 const markdownComponents = {
     h3: ({ children }: { children?: React.ReactNode }) => (
@@ -35,7 +35,7 @@ interface Message {
 const SUGGESTIONS = [
     "What are Robin's strongest AI skills?",
     'Tell me about his key projects',
-    'Why should we hire Robin?',
+    'What makes Robin a strong AI engineer?',
 ];
 
 export default function Twin() {
@@ -164,16 +164,17 @@ export default function Twin() {
                             </p>
                         </div>
 
-                        <div className="flex flex-col gap-2 max-w-md mx-auto">
+                        <div className="flex flex-col gap-2.5 max-w-md mx-auto">
                             {SUGGESTIONS.map((suggestion) => (
                                 <button
                                     key={suggestion}
                                     type="button"
                                     onClick={() => sendMessage(suggestion)}
                                     disabled={isLoading}
-                                    className="rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-left text-sm text-gray-700 shadow-sm transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-gray-900 disabled:cursor-not-allowed disabled:opacity-50"
+                                    className="group flex w-full items-center justify-between gap-3 rounded-xl border border-slate-200/80 bg-gradient-to-r from-slate-100 to-blue-50 px-4 py-3 text-left text-sm font-medium text-slate-700 shadow-sm transition-all hover:border-blue-300 hover:from-blue-50 hover:to-blue-100 hover:text-slate-900 hover:shadow disabled:cursor-not-allowed disabled:opacity-50"
                                 >
-                                    {suggestion}
+                                    <span>{suggestion}</span>
+                                    <ArrowRight className="h-4 w-4 shrink-0 text-slate-400 opacity-0 transition-all group-hover:translate-x-0.5 group-hover:text-blue-600 group-hover:opacity-100" />
                                 </button>
                             ))}
                         </div>

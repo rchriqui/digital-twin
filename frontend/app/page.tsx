@@ -2,6 +2,18 @@ import Twin from '@/components/twin';
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/robinchriqui/';
 const GITHUB_URL = 'https://github.com/rchriqui';
+const CONTACT_EMAIL = 'robin.chriqui@gmail.com';
+const CONTACT_URL = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Interview request')}&body=${encodeURIComponent(
+  `Hi Robin,
+
+I came across your digital twin and would like to connect about an opportunity.
+
+Best times for me:
+[Your availability]
+
+Best regards,
+[Your name]`
+)}`;
 
 const linkClass =
   'inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 transition-colors';
@@ -47,6 +59,12 @@ export default function Home() {
               className={linkClass}
             >
               View projects
+            </a>
+            <span className="text-slate-300 hidden sm:inline" aria-hidden="true">
+              ·
+            </span>
+            <a href={CONTACT_URL} className={linkClass}>
+              Contact
             </a>
           </div>
 

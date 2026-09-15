@@ -18,6 +18,16 @@ memory/
 .env.*
 !.env.example
 
+# Keys / credentials
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+credentials.json
+secrets.json
+
 # Node
 node_modules/
 out/
@@ -39,3 +49,6 @@ Thumbs.db
 
 # AWS
 .aws/
+
+# Course notes (local only)
+week2/

@@ -87,3 +87,9 @@ Push to `main` deploys to `dev`. Manual workflow dispatch can target `test` or `
 GitHub Actions assumes an AWS IAM role via OIDC (no long-lived access keys in the repo). Repository secrets: `AWS_ROLE_ARN`, `AWS_ACCOUNT_ID`, `DEFAULT_AWS_REGION`.
 
 Production uses the custom domain in `terraform/prod.tfvars`.
+
+## License
+
+Copyright (c) 2026 Robin Chriqui. All rights reserved.
+
+This project is **not** open source. You may look at the code; you may not copy, modify, or reuse it without written permission. See [LICENSE](LICENSE).
